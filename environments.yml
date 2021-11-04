@@ -1,0 +1,53 @@
+name: fastapi
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2021.10.26
+  - certifi=2021.10.8
+  - libcxx=12.0.0
+  - libffi=3.3
+  - ncurses=6.3
+  - openssl=1.1.1l
+  - pip=21.2.4
+  - python=3.9.7
+  - readline=8.1
+  - setuptools=58.0.4
+  - sqlite=3.36.0
+  - tk=8.6.11
+  - tzdata=2021e
+  - wheel=0.37.0
+  - xz=5.2.5
+  - zlib=1.2.11
+  - pip:
+    - aiomysql==0.0.21
+    - anyio==3.3.4
+    - asgiref==3.4.1
+    - cffi==1.15.0
+    - click==8.0.3
+    - cryptography==35.0.0
+    - databases==0.5.3
+    - decorator==5.1.0
+    - fastapi==0.70.0
+    - greenlet==1.1.2
+    - h11==0.12.0
+    - httptools==0.2.0
+    - idna==3.3
+    - pycparser==2.20
+    - pycryptodome==3.11.0
+    - pydantic==1.8.2
+    - pyjwt==2.3.0
+    - pymysql==0.9.3
+    - python-dateutil==2.8.2
+    - python-dotenv==0.19.1
+    - pyyaml==6.0
+    - six==1.16.0
+    - sniffio==1.2.0
+    - sqlalchemy==1.4.26
+    - starlette==0.16.0
+    - typing-extensions==3.10.0.2
+    - uvicorn==0.15.0
+    - uvloop==0.16.0
+    - validators==0.18.2
+    - watchgod==0.7
+    - websockets==10.0
+prefix: /opt/homebrew/Caskroom/miniconda/base/envs/fastapi
