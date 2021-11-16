@@ -39,6 +39,7 @@ def export_routes(route:str, router:FastAPI, db:Database):
         seed(int(time())) # gen new random seed from current unix time
         salt = ''.join(choice(ascii_letters+digits+punctuation) for _ in range(50))
         hash = SHA512.new((user_regis.password+salt).encode('ascii'))
+        user_regis.role = False; # user can not create account as admin
         user_regis.password = hash.hexdigest()
         user = User(
             **user_regis.dict(),
