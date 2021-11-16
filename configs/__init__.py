@@ -6,7 +6,7 @@ JWT_CONF_PATH = 'configs/jwt.conf'
 def load_conf(conf_path:str):
     conf = {}
     for line in open(path.join(path.abspath('.'), conf_path)).readlines():
-        split_line = line.split('=')
+        split_line = line.split('=', 1)
         conf[split_line[0]] = split_line[1].replace('\n', '')
     return conf
 
