@@ -2,6 +2,7 @@ from typing import Optional
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from database import db
+from fastapi.middleware.cors import CORSMiddleware
 
 # Import all routes
 from routes import user
@@ -17,6 +18,15 @@ server = FastAPI(
     description="RESTful API written in FastAPI for used as a backend for community project in FRA641 subject.",
     version="0.0.1-alpha",
     openapi_tags=tags_metadata
+)
+origins = ['*']
+
+server.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=True,
+        allow_methods=['*'],
+        allow_headers=['*']
 )
 # server.mount('/images', StaticFiles(directory='static/images'), name='images')
 
