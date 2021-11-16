@@ -27,7 +27,7 @@ class JWTBearer(HTTPBearer):
         # return role that was collected in payload if passed verification.
         isTokenValid: int = -1
         payload = decode_token(token)
-        if 'verification_failed' not in payload.keys() or 'unknown_error' not in payload.keys():
+        if 'verification_failed' not in payload.keys() and 'unknown_error' not in payload.keys():
             isTokenValid = payload['role'] 
         if isTokenValid == -1:
             raise HTTPException(status_code=401, detail='Invalid token or expired token.')
